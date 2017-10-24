@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="baseLayout" template="/WEB-INF/jsp/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="HubCiti" />
+		<put-attribute name="header" value="/WEB-INF/jsp/tiles/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tiles/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/tiles/footer.jsp" />
+	</definition>
+
+	<!-- Changed welcome page definition -->
+
+	<definition name="welcomepage" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/welcomepage.jsp" />
+	</definition>
+
+	<!-- Changed welcome page definition -->
+
+	<definition name="setuploginpage" extends="baseLayout">
+		<put-attribute name="title" value="Setup Login Screen" />
+		<put-attribute name="body" value="/WEB-INF/jsp/loginPageSetup.jsp" />
+	</definition>
+	<definition name="setupregscreen" extends="baseLayout">
+		<put-attribute name="title" value="Setup Registration Screen" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/registrationScreenSetup.jsp" />
+	</definition>
+	<definition name="imageCropPopUp" extends="baseLayout">
+		<put-attribute name="title" value="Image Crop" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="/WEB-INF/jsp/cropImage.jsp" />
+	</definition>
+
+	<definition name="setupaboutusscreen" extends="baseLayout">
+		<put-attribute name="title" value="Setup About Us Screen" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/aboutusScreenSetup.jsp" />
+	</definition>
+
+	<definition name="setupprivacypolicyscreen" extends="baseLayout">
+		<put-attribute name="title" value="Setup Privacy Policy Screen" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/privacyPolicySetup.jsp" />
+	</definition>
+
+	<definition name="setupsplashscreen" extends="baseLayout">
+		<put-attribute name="title" value="Setup Splash Screen" />
+		<put-attribute name="body" value="/WEB-INF/jsp/splashScreenSetup.jsp" />
+	</definition>
+
+
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+
+	<definition name="generalsettings" extends="baseLayout">
+		<put-attribute name="title" value="General Settings" />
+		<put-attribute name="body" value="/WEB-INF/jsp/generalSettings.jsp" />
+	</definition>
+
+
+	<!-- Change password definition starts -->
+
+	<definition name="changepassword" extends="baseLayout">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="body" value="/WEB-INF/jsp/changepassword.jsp" />
+	</definition>
+
+	<!-- Change password definition ends -->
+
+	<definition name="forgetpwd" extends="baseLayout">
+		<put-attribute name="title" value="Forgot Screen" />
+		<put-attribute name="body" value="/WEB-INF/jsp/forgotpwd.jsp" />
+	</definition>
+
+	<definition name="sessionTimeout" extends="baseLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/WEB-INF/jsp/sessionExpired.jsp" />
+	</definition>
+
+	<!-- Main menu definition Starts -->
+	<definition name="menutemplates" extends="baseLayout">
+		<put-attribute name="title" value="Select Menu Template" />
+		<put-attribute name="body" value="/WEB-INF/jsp/menutemplates.jsp" />
+	</definition>
+
+	<definition name="setuplistmenu" extends="baseLayout">
+		<put-attribute name="title" value="List Menu Template" />
+		<put-attribute name="body" value="/WEB-INF/jsp/setuplistmenu.jsp" />
+	</definition>
+
+	<definition name="setupgroupmenu" extends="baseLayout">
+		<put-attribute name="title" value="Group Menu Template" />
+		<put-attribute name="body" value="/WEB-INF/jsp/groupmenutemplate.jsp" />
+	</definition>
+
+	<definition name="iconicmenutemplate" extends="baseLayout">
+		<put-attribute name="title" value="Iconic Grid Template " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/iconicmenutemplate.jsp" />
+	</definition>
+	<definition name="displaymenu" extends="baseLayout">
+		<put-attribute name="title" value="Main Menu" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayMenu.jsp" />
+	</definition>
+
+	<!-- Main menu definition Ends -->
+
+	<!-- start of two column tab template -->
+	<definition name="twocoltabview" extends="baseLayout">
+		<put-attribute name="title" value="Two Column Tab Template" />
+		<put-attribute name="body" value="/WEB-INF/jsp/twocoltabview.jsp" />
+	</definition>
+
+	<!-- end of two column tab template -->
+
+	<!--Start:tab bar -->
+	<definition name="tabBarSetup" extends="baseLayout">
+		<put-attribute name="title" value="Setup Tab Bar" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tabBarSetup.jsp" />
+	</definition>
+
+	<!-- end:tab bar -->
+
+	<definition name="setupanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Add Anything Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addAnythingPage.jsp" />
+	</definition>
+
+	<definition name="editanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Setup Anything Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/editAnythingPage.jsp" />
+	</definition>
+
+	<definition name="displayanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Setup Anything Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/displayAnythingPage.jsp" />
+	</definition>
+
+	<definition name="buildAnythingPage" extends="baseLayout">
+		<put-attribute name="title" value="Build Anything Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/buildAnythingPage.jsp" />
+	</definition>
+
+	<definition name="makeYourOwnAnythingPage" extends="baseLayout">
+		<put-attribute name="title" value="Build Anything Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/makeYourOwnAnythingPage.jsp" />
+	</definition>
+
+	<definition name="edityourownanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Build Anything Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/editMakeYourOwnAnythingPage.jsp" />
+	</definition>
+
+	<definition name="menugeneralsettings" extends="baseLayout">
+		<put-attribute name="title" value="General Settings" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/menuGeneralSettings.jsp" />
+	</definition>
+
+	<!-- Alert related difinitions -->
+
+	<definition name="displayalertcat" extends="baseLayout">
+		<put-attribute name="title" value="Display Alert Category" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayalertcat.jsp" />
+	</definition>
+
+	<definition name="displayAlerts" extends="baseLayout">
+		<put-attribute name="title" value="Display Alerts" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayAlerts.jsp" />
+	</definition>
+
+	<definition name="addAlerts" extends="baseLayout">
+		<put-attribute name="title" value="Add Alerts" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addAlerts.jsp" />
+	</definition>
+
+	<!-- Event related definitions -->
+
+	<definition name="displayeventcate" extends="baseLayout">
+		<put-attribute name="title" value="Display Event Category" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayeventcate.jsp" />
+	</definition>
+
+
+	<definition name="manageevents" extends="baseLayout">
+		<put-attribute name="title" value="Manage Events" />
+		<put-attribute name="body" value="/WEB-INF/jsp/manageevents.jsp" />
+	</definition>
+
+	<definition name="displaycityexp" extends="baseLayout">
+		<put-attribute name="title" value="City Experience" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displaycityexp.jsp" />
+	</definition>
+
+	<definition name="displayFilters" extends="baseLayout">
+		<put-attribute name="title" value="Manage Filters" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayFilters.jsp" />
+	</definition>
+	
+	<definition name="addFilters" extends="baseLayout">
+		<put-attribute name="title" value="Add Filters" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addFilters.jsp" />
+	</definition>
+
+	<definition name="setupanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Setup Anything Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addAnythingPage.jsp" />
+	</definition>
+
+	<definition name="editanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Setup Anything Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/editAnythingPage.jsp" />
+	</definition>
+
+	<definition name="displayanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Setup Anything Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/displayAnythingPage.jsp" />
+	</definition>
+
+	<definition name="buildAnythingPage" extends="baseLayout">
+		<put-attribute name="title" value="Build Anything Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/buildAnythingPage.jsp" />
+	</definition>
+
+	<definition name="makeYourOwnAnythingPage" extends="baseLayout">
+		<put-attribute name="title" value="Build Anything Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/makeYourOwnAnythingPage.jsp" />
+	</definition>
+
+	<definition name="edityourownanythingpage" extends="baseLayout">
+		<put-attribute name="title" value="Build Anything Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/editMakeYourOwnAnythingPage.jsp" />
+	</definition>
+
+	<definition name="menugeneralsettings" extends="baseLayout">
+		<put-attribute name="title" value="General Settings" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/menuGeneralSettings.jsp" />
+	</definition>
+
+	<!-- Alert related difinitions -->
+
+	<definition name="displayalertcat" extends="baseLayout">
+		<put-attribute name="title" value="Display Alert Category" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayalertcat.jsp" />
+	</definition>
+
+	<definition name="displayAlerts" extends="baseLayout">
+		<put-attribute name="title" value="Display Alerts" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayAlerts.jsp" />
+	</definition>
+
+	<definition name="addAlerts" extends="baseLayout">
+		<put-attribute name="title" value="Add Alerts" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addAlerts.jsp" />
+	</definition>
+
+	<!-- Event related definitions -->
+
+	<definition name="displayeventcate" extends="baseLayout">
+		<put-attribute name="title" value="Display Event Category" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayeventcate.jsp" />
+	</definition>
+
+
+	<definition name="manageevents" extends="baseLayout">
+		<put-attribute name="title" value="Manage Events" />
+		<put-attribute name="body" value="/WEB-INF/jsp/manageevents.jsp" />
+	</definition>
+
+	<definition name="addupdateevent" extends="baseLayout">
+		<put-attribute name="title" value="Add Event" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addUpdateEvent.jsp" />
+	</definition>
+
+
+	<definition name="displaycityexp" extends="baseLayout">
+		<put-attribute name="title" value="City Experience" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displaycityexp.jsp" />
+	</definition>
+	
+	<definition name="userSettings" extends="baseLayout">
+		<put-attribute name="title" value="Setup User Settings" />
+		<put-attribute name="body" value="/WEB-INF/jsp/userSettings.jsp" />
+	</definition>
+	
+	<!-- HubCiti phase 2 : Setup retailer location -->
+	<definition name="getassociretlocs" extends="baseLayout">
+		<put-attribute name="title" value="Setup Retailer Locations" />
+		<put-attribute name="body" value="/WEB-INF/jsp/getassociretlocs.jsp" />
+	</definition>
+	
+	<definition name="getunassociretlocs" extends="baseLayout">
+		<put-attribute name="title" value="Setup Retailer Locations" />
+		<put-attribute name="body" value="/WEB-INF/jsp/getunassociretlocs.jsp"/>
+	</definition>
+	
+	<!-- HubCiti phase 2 : FAQ's -->
+	
+	<definition name="displayfaq" extends="baseLayout">
+		<put-attribute name="title" value="Setup FAQ's" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayFAQ.jsp"/>
+	</definition>
+	
+	<definition name="addfaq" extends="baseLayout">
+		<put-attribute name="title" value="Add FAQ" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addFAQ.jsp"/>
+	</definition>	
+	
+	<definition name="displayfaqcat" extends="baseLayout">
+		<put-attribute name="title" value="Setup FAQ Category" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayFAQCat.jsp"/>
+	</definition>
+	
+	<definition name="setupcombomenu" extends="baseLayout">
+		<put-attribute name="title" value="Combo Menu Template" />
+		<put-attribute name="body" value="/WEB-INF/jsp/combomenutemplate.jsp" />
+	</definition>
+	<!--  for new submenu screen -->
+	
+	<definition name="displaysubmenu" extends="baseLayout">
+		<put-attribute name="title" value="SubMenu" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displaysubmenu.jsp" />
+	</definition>
+	
+	<definition name="moduleTabBars" extends="baseLayout">
+		<put-attribute name="title" value="SetUp Tab Bar" />
+		<put-attribute name="body" value="/WEB-INF/jsp/moduleTabBars.jsp" />
+	</definition>
+	
+	<definition name="setupUsers" extends="baseLayout">
+		<put-attribute name="title" value="SetUp Users" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayUsers.jsp" />
+	</definition>
+	
+	<definition name="addUser" extends="baseLayout">
+		<put-attribute name="title" value="Add User" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addUser.jsp" />
+	</definition>
+	
+	<definition name="manageFundraisingEvent" extends="baseLayout">
+		<put-attribute name="title" value="Manage Fundraiser Events" />
+		<put-attribute name="body" value="/WEB-INF/jsp/manageFundraisingEvents.jsp" />
+	</definition>
+	
+	<definition name="addupdatefundraiserevent" extends="baseLayout">
+		<put-attribute name="title" value="Add Fundraising Event" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addUpdateFundraiserEvent.jsp" />
+	</definition>
+	
+	<definition name="displayDeals" extends="baseLayout">
+		<put-attribute name="title" value="Deal Of The Day" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayDeals.jsp" />
+	</definition>
+	
+	<definition name="displayCoupons" extends="baseLayout">
+		<put-attribute name="title" value="Deal Of The Day" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displayCoupons.jsp" />
+	</definition>
+	
+	<definition name="displaySpecials" extends="baseLayout">
+		<put-attribute name="title" value="Deal Of The Day" />
+		<put-attribute name="body" value="/WEB-INF/jsp/displaySpecials.jsp" />
+	</definition>
+	
+	<definition name="addEvtMarker" extends="baseLayout">
+		<put-attribute name="title" value="Add Event Markers" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addEvtMarker.jsp" />
+	</definition>
+	
+</tiles-definitions>
+

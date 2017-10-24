@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+
+	xmlns:context="http://www.springframework.org/schema/context"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+http://www.springframework.org/schema/beans/spring-beans.xsd
+
+http://www.springframework.org/schema/context
+
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="99999999999" />
+	</bean>
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean>
+
+	<bean id="localeChangeInterceptor"
+		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<property name="paramName" value="language" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="localeChangeInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>/message</value>
+				<value>/messages_en</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver"
+		p:basename="views" />
+	<context:component-scan base-package=" com.hubciti.controller" />
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+		p:definitions="/WEB-INF/tiles-defs.xml" />
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+	<bean id="loginScreenDetailsValidator" class="com.hubciti.validator.LoginScreenSettingsValidator" />
+	<bean id="registrationScreenSettingsValidator"
+		class="com.hubciti.validator.RegistrationScreenSettingsValidator" />
+	<bean id="aboutUsScreenSettingsValidation" class="com.hubciti.validator.AboutUsScreenSettingsValidation" />
+	<bean id="policyScreenSettingsValidation"
+		class="com.hubciti.validator.PrivacyPolicyScreenSettingsValidation" />
+	<bean id="splashScreenSettingsValidator" class="com.hubciti.validator.SplashScreenSettingsValidator" />
+	<bean id="passwordValidator" class="com.hubciti.validator.PasswordValidator" />
+
+	<bean id="iconinMenuValidator" class="com.hubciti.validator.IconinMenuValidator" />
+	<bean id="twoColTabValidator" class="com.hubciti.validator.TwoColTabValidator" />
+
+
+	<bean id="groupAndListMenuValidation" class="com.hubciti.validator.GroupAndListMenuValidation" />
+	<bean id="anyThingPgeSettingsValidation" class="com.hubciti.validator.AnyThingScreenSettingsValidation" />
+
+	<bean id="buttomBarButtonValidator" class="com.hubciti.validator.ButtomBarButtonValidator" />
+	<bean id="alertValidator" class="com.hubciti.validator.AlertValidator" />
+	
+	<bean id="filterValidation" class="com.hubciti.validator.FilterValidation" />
+	
+	<bean id="eventValidator" class="com.hubciti.validator.EventValidator" />
+	
+	<bean id="faqValidator" class="com.hubciti.validator.FAQValidator" />
+	
+	<bean id="usersValidator" class="com.hubciti.validator.UsersValidator" />
+	
+	<bean id="fundraiserEventValidator" class="com.hubciti.validator.FundraiserEventValidator" />
+	
+</beans>
